@@ -4,7 +4,8 @@
     Hola {{ title }}!
   </h1>
 </div>
+<button (click)="ocultarReservas()">{{nombre_boton}}</button>
 
 <juegos></juegos>
 <consolas></consolas>
-<reservas></reservas>
+<reservas *ngIf="mostrar_reservas"></reservas>

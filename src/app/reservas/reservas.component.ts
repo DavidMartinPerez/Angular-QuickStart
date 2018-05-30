@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+// OnInit cuando se carga el modulo
+// DoCheck cuando se cambia
+import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'reservas',
   templateUrl: './reservas.component.html',
   styleUrls: ['./reservas.component.css']
 })
-export class ReservasComponent implements OnInit {
+export class ReservasComponent implements OnInit, DoCheck, OnDestroy {
 
   public nombre:string;
   constructor() {
@@ -16,4 +18,14 @@ export class ReservasComponent implements OnInit {
     console.log(`Se ha cargado el modulo de ${this.nombre}`);
   }
 
+  ngDoCheck(){
+    console.log("Docheck : Se modifico");
+  }
+  cambiarTitulo(nombre){
+    this.nombre = nombre;
+  }
+
+  ngOnDestroy(){
+    console.log("se elimino reservas");
+  }
 }
