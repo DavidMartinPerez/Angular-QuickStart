@@ -1,5 +1,12 @@
 <h2>{{ titulo }}</h2>
 
 <ul>
-    <li *ngFor="let consola of consolas">{{consola.nombre}} <b>{{consola.precio}}€</b></li>
+    <li *ngFor="let consola of consolas">
+        {{consola.nombre}} <b>{{consola.precio}}€</b>
+        <span *ngIf="consola.precio <= 400" [style.color]="consola.precio > 330 ? 'blue' : 'green'"> ¡En oferta!</span>
+    </li>
 </ul>
+
+<!-- -->
+<h2>Directivas</h2>
+<p>*ngIf="consola.precio < 400"</p>
