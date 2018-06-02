@@ -1,3 +1,10 @@
-<p>
-  home works!
-</p>
+<h2>Página principal</h2>
+<div *ngIf="logeado; else noIdentificado">
+  <h3>Estas identificado en la aplicación</h3>
+  <button (click)="cerrarSesion()">Salir</button>
+</div>
+
+<ng-template #noIdentificado>
+  <p>No estas logeado</p>
+  <button (click)="iniciarSesion()">Entrar</button>
+</ng-template>
