@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 // Aquí se importan las clases de los componentes
 //generar componente automatico ng g component nombre-componente
 import { AppComponent } from './app.component';
@@ -16,7 +16,8 @@ import { ReservasComponent } from './reservas/reservas.component';
     ReservasComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

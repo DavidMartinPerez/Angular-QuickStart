@@ -12,8 +12,10 @@ export class ConsolasComponent implements OnInit{
     public consolas:Array<Consola>;
     public color:string;
     public marcas:string[];
+    public nuevaMarca:string;
 
     constructor(){
+        this.nuevaMarca = "Createla";
         this.color = 'gris';
         this.marcas = new Array;
         this.titulo = "Consolas";
@@ -35,5 +37,10 @@ export class ConsolasComponent implements OnInit{
     ngOnInit(){
         this.getMarcas();
         //console.log(`Se ha cargado el modulo de ${this.titulo}`);
+    }
+    setMarca(){
+        if(this.marcas.indexOf(this.nuevaMarca) < 0){
+            this.marcas.push(this.nuevaMarca);
+        }
     }
 }
