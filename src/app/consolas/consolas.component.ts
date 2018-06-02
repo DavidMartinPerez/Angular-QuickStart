@@ -43,4 +43,10 @@ export class ConsolasComponent implements OnInit{
             this.marcas.push(this.nuevaMarca);
         }
     }
+    eliminarMarca(indice){
+        this.marcas[indice] = "¡NOOO!";
+        setTimeout(()=> this.marcas.splice(indice, 1),
+        500);
+
+    }
 }
