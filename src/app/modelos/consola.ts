@@ -15,6 +15,7 @@ export class Consola {
         public nombre:string,
         public marca:string,
         public modelo:string,
+        public color:string,
         public precio:number,
         public stock:number
     ){}

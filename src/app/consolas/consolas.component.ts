@@ -10,16 +10,18 @@ import { Consola } from '../modelos/consola';
 export class ConsolasComponent implements OnInit{
     public titulo:string;
     public consolas:Array<Consola>;
+    public color:string;
     public marcas:string[];
 
     constructor(){
+        this.color = 'gris';
         this.marcas = new Array;
         this.titulo = "Consolas";
         this.consolas = [
-            new Consola('Nintendo Switch','Nintendo','Portatil',320,30),
-            new Consola('PS4','Sony','Play Station',400,60),
-            new Consola('XO','Microsoft','Xbox',500,80),
-            new Consola('XBX360','Microsoft','Xbox',200,0)
+            new Consola('Nintendo Switch','Nintendo','Portatil','Rojo',320,30),
+            new Consola('PS4','Sony','Play Station','Gris',400,60),
+            new Consola('XO','Microsoft','Xbox','Gris',500,80),
+            new Consola('XBX360','Microsoft','Xbox','Gris',200,0)
         ]
     }
     getMarcas(){

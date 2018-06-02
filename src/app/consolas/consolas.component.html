@@ -19,3 +19,17 @@
 <h2>Directivas</h2>
 <p>*ngIf="consola.precio < 400"</p>
 <p>*ngFor="let consola of consolas"</p>
+
+<h3>El color de la mayoria de consolas es</h3>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'gris'">
+        Gris
+    </li>
+    <li *ngSwitchCase="'azul'">
+        Azul
+    </li>
+    <li *ngSwitchCase="'rojo'">
+        Rojo
+    </li>
+
+</ul>
