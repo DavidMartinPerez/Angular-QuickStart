@@ -13,12 +13,16 @@ export class ConsolasComponent implements OnInit{
     public color:string;
     public marcas:string[];
     public nuevaMarca:string;
+    public estadoInput:string;
+    public mensajeRepetido:string;
 
     constructor(){
         this.nuevaMarca = "Createla";
         this.color = 'gris';
         this.marcas = new Array;
         this.titulo = "Consolas";
+        this.mensajeRepetido = "";
+        this.estadoInput = "";
         this.consolas = [
             new Consola('Nintendo Switch','Nintendo','Portatil','Rojo',320,30),
             new Consola('PS4','Sony','Play Station','Gris',400,60),
@@ -41,12 +45,20 @@ export class ConsolasComponent implements OnInit{
     setMarca(){
         if(this.marcas.indexOf(this.nuevaMarca) < 0){
             this.marcas.push(this.nuevaMarca);
+            this.mensajeRepetido = "";
+        }else{
+            this.mensajeRepetido = "¡No vale repetirse!";
         }
     }
     eliminarMarca(indice){
         this.marcas[indice] = "¡NOOO!";
         setTimeout(()=> this.marcas.splice(indice, 1),
         500);
-
+    }
+    onBlur(){
+        this.estadoInput = "¡Espera! ¡No te vayas!";
+    }
+    onFocus(){
+        this.estadoInput = "¡Siii, añademe!"
     }
 }
