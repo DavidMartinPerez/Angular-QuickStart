@@ -10,17 +10,28 @@ import { Consola } from '../modelos/consola';
 export class ConsolasComponent implements OnInit{
     public titulo:string;
     public consolas:Array<Consola>;
+    public marcas:string[];
 
     constructor(){
+        this.marcas = new Array;
         this.titulo = "Consolas";
         this.consolas = [
             new Consola('Nintendo Switch','Nintendo','Portatil',320,30),
             new Consola('PS4','Sony','Play Station',400,60),
-            new Consola('XO','Microsoft','Xbox',500,80)
+            new Consola('XO','Microsoft','Xbox',500,80),
+            new Consola('XBX360','Microsoft','Xbox',200,0)
         ]
     }
-
+    getMarcas(){
+        this.consolas.forEach((consola,index)=>{
+            if(this.marcas.indexOf(consola.marca) < 0){
+                this.marcas.push(consola.marca);
+            }
+        });
+        console.log(this.marcas);
+    }
     ngOnInit(){
+        this.getMarcas();
         //console.log(`Se ha cargado el modulo de ${this.titulo}`);
     }
 }
