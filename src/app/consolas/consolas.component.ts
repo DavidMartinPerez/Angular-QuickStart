@@ -2,10 +2,13 @@
 // DoCheck cuando se cambia
 import { Component, OnInit } from '@angular/core';
 import { Consola } from '../modelos/consola';
+import { ConsolaService } from '../Servicios/consola.service';
+
 
 @Component({
     selector: 'consolas',
-    templateUrl: './consolas.component.html'
+    templateUrl: './consolas.component.html',
+    providers: [ConsolaService]
 })
 export class ConsolasComponent implements OnInit{
     public titulo:string;
@@ -16,19 +19,12 @@ export class ConsolasComponent implements OnInit{
     public estadoInput:string;
     public mensajeRepetido:string;
 
-    constructor(){
+    constructor(private _consolaService: ConsolaService){
         this.nuevaMarca = "Createla";
         this.color = 'gris';
         this.marcas = new Array;
         this.titulo = "Consolas";
         this.mensajeRepetido = "";
-        this.estadoInput = "";
-        this.consolas = [
-            new Consola('Nintendo Switch','Nintendo','Portatil','Rojo',320,30),
-            new Consola('PS4','Sony','Play Station','Gris',400,60),
-            new Consola('XO','Microsoft','Xbox','Gris',500,80),
-            new Consola('XBX360','Microsoft','Xbox','Gris',200,0)
-        ]
     }
     getMarcas(){
         this.consolas.forEach((consola,index)=>{
@@ -39,6 +35,7 @@ export class ConsolasComponent implements OnInit{
         console.log(this.marcas);
     }
     ngOnInit(){
+        this.consolas = this._consolaService.getConsolas();
         this.getMarcas();
         //console.log(`Se ha cargado el modulo de ${this.titulo}`);
     }
