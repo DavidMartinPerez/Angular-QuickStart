@@ -7,8 +7,18 @@
     {{ descripcion }}
   </h2>
 </div>
-<button (click)="ocultarReservas()">{{nombre_boton}}</button>
+<nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>&nbsp;
+    <a [routerLink]="['/consolas']"[routerLinkActive]="['active']">Consolas</a>&nbsp;
+    <a [routerLink]="['/videojuegos']" [routerLinkActive]="['active']">Videojuegos</a>&nbsp;
+    <a [routerLink]="['/reservas']" [routerLinkActive]="['active']">Reservas</a>&nbsp;
+    <a [routerLink]="['/cesta']" [routerLinkActive]="['active']">Cesta</a>&nbsp;
+  </nav>
+  <hr>
+<!--button (click)="ocultarReservas()">{{nombre_boton}}</button>
+<reservas *ngIf="mostrar_reservas"></reservas>
 
 <juegos></juegos>
-<consolas></consolas>
-<reservas *ngIf="mostrar_reservas"></reservas>
+<consolas></consolas-->
+
+<router-outlet></router-outlet>

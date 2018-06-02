@@ -2,3 +2,6 @@
     color: lightcoral;
     font-size: 15px;
 }
+.active{
+    border: 3px solid palegreen;
+}

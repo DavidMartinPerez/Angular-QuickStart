@@ -3,10 +3,10 @@
 <p>Añadir marca {{estadoInput}}</p>
 <input type="text" [(ngModel)]="nuevaMarca" (blur)="onBlur()" (focus)="onFocus()" (keyup.enter)="setMarca()"/>
 <button (click)="setMarca()">Añadir Marca</button>
+<span style="color:red">{{mensajeRepetido}}</span>
 
-<p>{{mi_marca}}</p>
 <h2>Marcas dispobibles</h2>
-<sub>Pulsa en una para eliminarla <span style="color:red">{{mensajeRepetido}}</span></sub>
+<sub>Pulsa en una para eliminarla</sub>
 <div *ngFor="let marca of marcas; let indice = index"><span (click)="eliminarMarca(indice)">{{indice + '. ' +marca}}</span></div>
 
 <h2>Consolas disponibles</h2>
@@ -14,7 +14,7 @@
     <li *ngFor="let consola of consolas">
         <span [ngStyle]="{
             'text-decoration': !consola.stock ? 'line-through' : 'none'
-        }">{{consola.nombre}} <b [class.altoPrecio] = "consola.precio > 320">{{consola.precio}}€</b>
+        }">{{consola.nombre}} <b [class.altoPrecio] = "consola.precio > 320" [ngClass]="{ 'altoPrecio': consola.precio > 320, 'bajoPrecio': consola.precio < 200 }">{{consola.precio}}€</b>
         </span>
         <span *ngIf="consola.precio <= 400" [style.color]="consola.precio > 330 ? 'blue' : 'green'" > ¡En oferta!</span>
     </li>
