@@ -14,9 +14,9 @@
     <li *ngFor="let consola of consolas">
         <span [ngStyle]="{
             'text-decoration': !consola.stock ? 'line-through' : 'none'
-        }">{{consola.nombre}} <b>{{consola.precio}}€</b>
+        }">{{consola.nombre}} <b [class.altoPrecio] = "consola.precio > 320">{{consola.precio}}€</b>
         </span>
-        <span *ngIf="consola.precio <= 400" [style.color]="consola.precio > 330 ? 'blue' : 'green'"> ¡En oferta!</span>
+        <span *ngIf="consola.precio <= 400" [style.color]="consola.precio > 330 ? 'blue' : 'green'" > ¡En oferta!</span>
     </li>
 </ul>
 
