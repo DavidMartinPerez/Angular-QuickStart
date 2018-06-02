@@ -1,7 +1,5 @@
 <h2>{{ titulo }}</h2>
 
 <ul>
-    <li>XBOX</li>
-    <li>PS4</li>
-    <li>NSW</li>
+    <li *ngFor="let consola of consolas">{{consola.nombre}} <b>{{consola.precio}}€</b></li>
 </ul>

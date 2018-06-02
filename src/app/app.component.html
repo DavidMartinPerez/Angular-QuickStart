@@ -1,8 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div style="text-align:center;" [ngStyle]="{'background': config.fondo, 'color': config.color}">
   <h1>
-    Hola {{ title }}!
+    {{ title }}!
   </h1>
+  <h2>
+    {{ descripcion }}
+  </h2>
 </div>
 <button (click)="ocultarReservas()">{{nombre_boton}}</button>
 

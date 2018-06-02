@@ -15,6 +15,6 @@ export class JuegosComponent implements OnInit{
     }
 
     ngOnInit(){
-        console.log(`Se ha cargado el modulo de ${this.nombre}`);
+       // console.log(`Se ha cargado el modulo de ${this.nombre}`);
     }
 }

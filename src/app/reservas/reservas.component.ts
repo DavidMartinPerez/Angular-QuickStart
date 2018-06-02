@@ -15,17 +15,17 @@ export class ReservasComponent implements OnInit, DoCheck, OnDestroy {
   }
 
   ngOnInit(){
-    console.log(`Se ha cargado el modulo de ${this.nombre}`);
+    //console.log(`Se ha cargado el modulo de ${this.nombre}`);
   }
 
   ngDoCheck(){
-    console.log("Docheck : Se modifico");
+    //console.log("Docheck : Se modifico");
   }
   cambiarTitulo(nombre){
     this.nombre = nombre;
   }
 
   ngOnDestroy(){
-    console.log("se elimino reservas");
+    //console.log("se elimino reservas");
   }
 }
