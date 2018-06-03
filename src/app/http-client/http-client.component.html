@@ -1,0 +1,10 @@
+<input type="text" [(ngModel)]="postsId" (keyup.enter)="cargaPost()" /> Dale al enter!
+
+<div *ngIf="!posts">
+    {{msgError}}
+</div>
+<div *ngIf="posts">
+  <h1>POSTS:</h1>
+  <h2>{{posts.title}}</h2>
+  <p>{{posts.body}}</p>
+</div>
