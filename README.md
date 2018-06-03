@@ -34,6 +34,7 @@ Este repositorio es de mis inicios con Angular. Si ves algo mal o algo mejorable
     * Crear formularios
     * Validar formularios
     * Ajax, peticiones HTTP
+    * ngSubmit
 #
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
