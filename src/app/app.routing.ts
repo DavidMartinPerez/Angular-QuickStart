@@ -8,7 +8,8 @@ import { JuegosComponent } from './juegos/juegos.component';
 import { ReservasComponent } from './reservas/reservas.component';
 import { HomeComponent } from './home/home.component';
 import { CestaComponent } from './cesta/cesta.component';
-import { HttpClientComponent } from './http-client/http-client.component'
+import { HttpClientComponent } from './http-client/http-client.component';
+import { ConctatoComponent } from './conctato/conctato.component';
 
 // Array de rutas
 const appRoutes:Routes = [
@@ -18,6 +19,7 @@ const appRoutes:Routes = [
     {path: 'cesta', component: CestaComponent},
     {path: 'cesta/:nombre', component: CestaComponent},
     {path: 'http', component: HttpClientComponent },
+    {path: 'conctatanos', component: ConctatoComponent },
     {path: '**', component: HomeComponent }
 ]
 

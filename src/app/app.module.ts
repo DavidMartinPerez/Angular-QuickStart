@@ -12,6 +12,7 @@ import { ReservasComponent } from './reservas/reservas.component';
 import { HomeComponent } from './home/home.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { HttpClientComponent } from './http-client/http-client.component';
+import { ConctatoComponent } from './conctato/conctato.component';
 
 //Pipes personalziados:
 import { CalculadoraPipe } from './pipes/calculadora.pipe';
@@ -25,7 +26,8 @@ import { CalculadoraPipe } from './pipes/calculadora.pipe';
     HomeComponent,
     CestaComponent,
     HttpClientComponent,
-    CalculadoraPipe
+    CalculadoraPipe,
+    ConctatoComponent,
   ],
   imports: [
     BrowserModule,

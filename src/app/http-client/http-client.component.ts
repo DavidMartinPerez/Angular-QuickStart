@@ -12,11 +12,17 @@ export class HttpClientComponent implements OnInit {
   public postsId:any;
   public msgError:string;
   public fecha: any;
+  public new_user: any;
+  public usuarioGuardado: any;
 
   constructor(
     private _peticionesService: PeticionesService
   ) {
     this.postsId = 1;
+    this.new_user = {
+      "name": "",
+      "job": ""
+    }
   }
 
   ngOnInit() {
@@ -26,16 +32,27 @@ export class HttpClientComponent implements OnInit {
   cargaPost(){
     this.posts = "";
     this._peticionesService.getUser(this.postsId).subscribe(
-      result => {
+      (result) => {
         this.msgError = "Cargado!";
         console.log(result);
         this.posts = result;
       },
-      error => {
+      (error) => {
         this.msgError = "No existe este post...";
         this.posts = "";
       }
     );
+  }
+  onSubmit(form){
+    this._peticionesService.addUser(this.new_user).subscribe(
+      (result) => {
+        console.log(result);
+        this.usuarioGuardado = result;
+      },
+      (error) =>{
+        console.log(<any>error);
+      }
+    )
   }
 
 }

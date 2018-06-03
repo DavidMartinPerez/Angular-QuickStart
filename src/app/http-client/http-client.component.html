@@ -13,3 +13,19 @@
   <h2>{{posts.title}}</h2>
   <p>{{posts.body}}</p>
 </div>
+<hr>
+<h2>Formulario de crear un usuario:</h2>
+<form #newUse="ngForm" (ngSubmit)="onSubmit(new_user)">
+  <label for="name">Nombre</label>
+  <input type="text" name="name" #name="ngModel" [(ngModel)]="new_user.name" required/>
+
+  <label for="job">Trabajo</label>
+  <input type="text" name="job" #job="ngModel" [(ngModel)]="new_user.job" required/>
+
+  <input type="submit" value="Guardar usuario" [disabled]="!newUse.form.valid" />
+</form>
+<div *ngIf="usuarioGuardado">
+  <h2>El usuario se ha guardado correctamente</h2>
+  <h3>{{usuarioGuardado.name}}</h3>
+  <h4>{{usuarioGuardado.job}}</h4>
+</div>

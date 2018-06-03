@@ -2,6 +2,38 @@
 
 Este repositorio es de mis inicios con Angular. Si ves algo mal o algo mejorable, puedes decírmelo sin problemas! Muchas gracias y saludos.
 
+## Lo que he aprendido:
+* Crear componentes
+* Hooks / Eventos ciclos de vida
+* Importar y exportar: Clases y modelos
+* Directivas:
+    * ngIf
+    * ngFor
+    * ngSwitch y ngSwitchCase
+* Two way data-binding
+* binding bi-direccional
+* Eventos
+    * Click
+    * Blur y Focus
+    * KeyUp y KeyDown
+* ngClass
+* Routing
+* Routing asíncrono
+* Params url
+* NgRouterNavegate
+* ngTemplate
+    * Then, if, elseif, else
+* Servicios
+* HttpClient
+    * Ajax
+    * Ejectos de carga
+* Pipes
+    * Usar pipes
+    * Crear pipes personalizados
+* Formularios:
+    * Crear formularios
+    * Validar formularios
+    * Ajax, peticiones HTTP
 #
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 
