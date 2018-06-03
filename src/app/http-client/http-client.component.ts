@@ -11,6 +11,7 @@ export class HttpClientComponent implements OnInit {
   public posts:any;
   public postsId:any;
   public msgError:string;
+  public fecha: any;
 
   constructor(
     private _peticionesService: PeticionesService
@@ -19,7 +20,8 @@ export class HttpClientComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.cargaPost()
+    this.fecha = new Date(2019,5,20);
+    this.cargaPost();
   }
   cargaPost(){
     this.posts = "";

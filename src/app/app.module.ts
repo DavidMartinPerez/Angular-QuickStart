@@ -13,6 +13,9 @@ import { HomeComponent } from './home/home.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { HttpClientComponent } from './http-client/http-client.component';
 
+//Pipes personalziados:
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
+
 @NgModule({
   declarations: [ // De claramos los compoenentes
     AppComponent,
@@ -22,6 +25,7 @@ import { HttpClientComponent } from './http-client/http-client.component';
     HomeComponent,
     CestaComponent,
     HttpClientComponent,
+    CalculadoraPipe
   ],
   imports: [
     BrowserModule,
