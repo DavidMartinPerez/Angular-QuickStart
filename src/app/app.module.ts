@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { CestaComponent } from './cesta/cesta.component';
 import { HttpClientComponent } from './http-client/http-client.component';
 import { ConctatoComponent } from './conctato/conctato.component';
+import { NgforifComponent } from './ngforif/ngforif.component';
 
 //Pipes personalziados:
 import { CalculadoraPipe } from './pipes/calculadora.pipe';
@@ -28,6 +29,7 @@ import { CalculadoraPipe } from './pipes/calculadora.pipe';
     HttpClientComponent,
     CalculadoraPipe,
     ConctatoComponent,
+    NgforifComponent,
   ],
   imports: [
     BrowserModule,

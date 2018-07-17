@@ -7,20 +7,22 @@
     {{ descripcion }}
   </h2>
 </div>
-<nav>
-    <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>&nbsp;
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>&nbsp;
     <a [routerLink]="['/consolas']"[routerLinkActive]="['active']">Consolas</a>&nbsp;
     <a [routerLink]="['/videojuegos']" [routerLinkActive]="['active']">Videojuegos</a>&nbsp;
     <a [routerLink]="['/reservas']" [routerLinkActive]="['active']">Reservas</a>&nbsp;
     <a [routerLink]="['/cesta']" [routerLinkActive]="['active']">Cesta</a>&nbsp;
     <a [routerLink]="['/http']" [routerLinkActive]="['active']">Http</a>&nbsp;
     <a [routerLink]="['/conctatanos']" [routerLinkActive]="['active']">Conctatanos</a>&nbsp;
+    <a [routerLink]="['/forif']" [routerLinkActive]="['active']">ngif/for</a>&nbsp;
   </nav>
   <hr>
 <!--button (click)="ocultarReservas()">{{nombre_boton}}</button>
 <reservas *ngIf="mostrar_reservas"></reservas>
-
+<
 <juegos></juegos>
 <consolas></consolas-->
-
-<router-outlet></router-outlet>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

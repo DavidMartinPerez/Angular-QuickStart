@@ -28,6 +28,7 @@ export class HttpClientComponent implements OnInit {
   ngOnInit() {
     this.fecha = new Date(2019,5,20);
     this.cargaPost();
+    console.log("cargando HttpClientComponent")
   }
   cargaPost(){
     this.posts = "";

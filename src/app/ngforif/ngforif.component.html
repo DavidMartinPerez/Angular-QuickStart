@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-6">
+        <h1>*ngIf</h1><hr>
+        <div>
+            Estado: {{estado}}
+            <div *ngIf="estado" class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Perfefefe</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{frase.autor}}</h5>
+                    <p class="card-text">{{frase.mensaje}}</p>
+                </div>
+            </div>
+            <div *ngIf="!estado" class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                <div class="card-header">Errorrorororo</div>
+                <div class="card-body">
+                    <h5 class="card-title">Error</h5>
+                    <p class="card-text">ErrorErrorErrorErrorErrorErrorErrorErrorErrorErrorError.</p>
+                </div>
+            </div>
+        </div>
+
+        <button (click)="cambioEstado()" type="button" class="btn" [ngClass]="{ 'btn-outline-primary' : !estado, 'btn-outline-danger' : estado }">
+            <span *ngIf="estado">Ensuciar</span>
+            <span *ngIf="!estado">Solucionar!!!!!</span>
+        </button>
+    </div>
+    <div class="col-6">
+        <h1>*ngFor</h1><hr>
+        <ul class="list-group">
+            <li *ngFor="let pers of personajes; let i = index" class="list-group-item">
+                {{ i+1 }} - {{  pers  }}
+            </li>
+        </ul>
+    </div>
+</div>
