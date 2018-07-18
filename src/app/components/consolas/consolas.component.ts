@@ -1,8 +1,8 @@
 // OnInit cuando se carga el modulo
 // DoCheck cuando se cambia
 import { Component, OnInit } from '@angular/core';
-import { Consola } from '../modelos/consola';
-import { ConsolaService } from '../Servicios/consola.service';
+import { Consola } from '../../modelos/consola';
+import { ConsolaService } from '../../Servicios/consola.service';
 
 
 @Component({

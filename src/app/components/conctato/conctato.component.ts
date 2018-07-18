@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { contactoUsuario } from '../modelos/contacto.usuario';
+import { contactoUsuario } from '../../modelos/contacto.usuario';
 
 @Component({
   selector: 'app-conctato',

@@ -3,14 +3,15 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 //Importar componenetes
-import { ConsolasComponent } from './consolas/consolas.component';
-import { JuegosComponent } from './juegos/juegos.component';
-import { ReservasComponent } from './reservas/reservas.component';
-import { HomeComponent } from './home/home.component';
-import { CestaComponent } from './cesta/cesta.component';
-import { HttpClientComponent } from './http-client/http-client.component';
-import { ConctatoComponent } from './conctato/conctato.component';
-import { NgforifComponent } from './ngforif/ngforif.component';
+import { ConsolasComponent } from './components/consolas/consolas.component';
+import { JuegosComponent } from './components/juegos/juegos.component';
+import { ReservasComponent } from './components/reservas/reservas.component';
+import { HomeComponent } from './components/home/home.component';
+import { CestaComponent } from './components/cesta/cesta.component';
+import { HttpClientComponent } from './components/http-client/http-client.component';
+import { ConctatoComponent } from './components/conctato/conctato.component';
+import { NgforifComponent } from './components/ngforif/ngforif.component';
+import { SuperheroesComponent } from './components/superheroes/superheroes.component';
 
 // Array de rutas
 const appRoutes:Routes = [
@@ -22,6 +23,8 @@ const appRoutes:Routes = [
     {path: 'http', component: HttpClientComponent },
     {path: 'conctatanos', component: ConctatoComponent },
     {path: 'forif', component: NgforifComponent },
+    {path: 'superheroes', component: SuperheroesComponent },
+    {path: 'superheroes/dc', component: NgforifComponent },
     {path: '**', component: HomeComponent }, // error 404 //¡OJO! ESTA SIEMPRE SIEMPRE LA ÚLTIMA SINO NO RECONOCE LAS DEMÁS
 ]
 

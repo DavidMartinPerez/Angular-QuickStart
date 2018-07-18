@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PeticionesService } from '../Servicios/peticiones.service';
+import { PeticionesService } from '../../Servicios/peticiones.service';
 
 @Component({
   selector: 'app-http-client',
