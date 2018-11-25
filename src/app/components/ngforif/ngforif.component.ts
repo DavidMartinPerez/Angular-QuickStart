@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ngforif.component.css']
 })
 export class NgforifComponent implements OnInit {
-  public estado:boolean;
+  public estado:Boolean;
   public frase:any;
-  public personajes:string[]
+  public personajes:String[]
 
   constructor() {
     this.personajes = [ 'Spiderman', 'Veneno', 'Dr. Octopus', 'Mary Jane' ];
