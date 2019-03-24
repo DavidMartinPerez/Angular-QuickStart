@@ -35,6 +35,21 @@ Este repositorio es de mis inicios con Angular. Si ves algo mal o algo mejorable
     * Validar formularios
     * Ajax, peticiones HTTP
     * ngSubmit
+* Directivas personalizadas:
+    * Crear directivas personalizadas
+    * HostListener (addEventListener)
+    * Input
+    * Output
+* Ciclo de vida:
+    * constructor
+    * ngOnInit
+    * ngOnChanges
+    * ngDoCheck
+    * ngAfterContentInit
+    * ngAfterContentChecked
+    * ngAfterViewInit
+    * ngAfterViewChecked
+    * ngOnDestroy
 #
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
 

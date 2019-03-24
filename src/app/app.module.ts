@@ -22,6 +22,9 @@ import { AboutComponent } from './components/superheroes/components/about/about.
 
 //Pipes personalziados:
 import { CalculadoraPipe } from './pipes/calculadora.pipe';
+import { ResaltadoDirective } from './directivas/resaltado.directive';
+import { DirectivasComponent } from './components/directivas/directivas.component';
+import { CiclovidaComponent } from './components/ciclovida/ciclovida.component';
 
 @NgModule({
   declarations: [ // De claramos los compoenentes
@@ -39,7 +42,10 @@ import { CalculadoraPipe } from './pipes/calculadora.pipe';
     AboutComponent,
     SearchComponent,
     HeroesComponent,
-    SuperheroesComponent
+    SuperheroesComponent,
+    ResaltadoDirective,
+    DirectivasComponent,
+    CiclovidaComponent
   ],
   imports: [
     BrowserModule,

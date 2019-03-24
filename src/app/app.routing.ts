@@ -12,6 +12,8 @@ import { HttpClientComponent } from './components/http-client/http-client.compon
 import { ConctatoComponent } from './components/conctato/conctato.component';
 import { NgforifComponent } from './components/ngforif/ngforif.component';
 import { SuperheroesComponent } from './components/superheroes/superheroes.component';
+import { DirectivasComponent } from './components/directivas/directivas.component';
+import { CiclovidaComponent } from './components/ciclovida/ciclovida.component';
 
 // Array de rutas
 const appRoutes:Routes = [
@@ -25,6 +27,8 @@ const appRoutes:Routes = [
     {path: 'forif', component: NgforifComponent },
     {path: 'superheroes', component: SuperheroesComponent },
     {path: 'superheroes/dc', component: NgforifComponent },
+    {path: 'directivasPersonalizadas', component: DirectivasComponent },
+    {path: 'ciclovida', component: CiclovidaComponent },
     {path: '**', component: HomeComponent }, // error 404 //¡OJO! ESTA SIEMPRE SIEMPRE LA ÚLTIMA SINO NO RECONOCE LAS DEMÁS
 ]
 
